@@ -1,0 +1,1243 @@
+
+/* ============================================================
+   RESET CSS
+   Baseado no reset clássico de Eric Meyer.
+   ============================================================ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-size: 100%;
+    font: inherit;
+
+    vertical-align: baseline;
+}
+
+
+/* Elementos HTML5 semânticos */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+body {
+    line-height: 1;
+}
+
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+blockquote,
+q {
+    quotes: none;
+}
+
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ============================================================
+   VARIÁVEIS CSS
+   ============================================================ */
+
+:root {
+
+    /* Cores principais */
+    --color-primary: #236b57;
+    --color-primary-dark: #15483a;
+    --color-primary-light: #e2f2ec;
+
+    /* Cores de destaque */
+    --color-accent: #e89a45;
+    --color-accent-dark: #b96d20;
+    --color-accent-light: #fff2e3;
+
+    /* Cores neutras */
+    --color-background: #ffffff;
+    --color-background-alt: #f5f9f7;
+    --color-surface: #ffffff;
+
+    --color-text: #26352f;
+    --color-text-light: #53655e;
+
+    --color-border: #dce7e2;
+
+    --color-white: #ffffff;
+
+
+    /* Tipografia */
+    --font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    --font-size-base: 1rem;
+    --line-height-base: 1.65;
+
+
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 5rem;
+
+
+    /* Bordas */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+
+
+    /* Sombras */
+    --shadow-sm:
+        0 4px 14px rgba(0, 0, 0, 0.06);
+
+    --shadow-md:
+        0 12px 30px rgba(0, 0, 0, 0.09);
+
+
+    /* Container */
+    --container-width: 1200px;
+
+
+    /* Transições */
+    --transition: 0.25s ease;
+}
+
+
+/* ============================================================
+   CONFIGURAÇÕES GERAIS
+   ============================================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 320px;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+
+img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+strong {
+    font-weight: 700;
+}
+
+
+code {
+    padding: 0.15rem 0.4rem;
+
+    border-radius: 0.25rem;
+
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 0.9em;
+}
+
+
+/* ============================================================
+   ACESSIBILIDADE
+   ============================================================ */
+
+a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 4px;
+
+    border-radius: 3px;
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.container {
+    width: min(
+        calc(100% - 2rem),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.site-header {
+    position: relative;
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/*
+    MOBILE-FIRST
+
+    O brand permanece acima do header-navigation.
+
+    brand
+       ↓
+    header-navigation
+*/
+.header-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--spacing-lg);
+
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+}
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.logo {
+    display: inline-block;
+
+    width: fit-content;
+
+    color: var(--color-white);
+
+    font-size: 2rem;
+    font-weight: 800;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* ============================================================
+   HEADER NAVIGATION
+   MOBILE
+   ============================================================ */
+
+/*
+    No mobile:
+
+    descrição
+       ↓
+    navegação
+
+    Os dois elementos ficam centralizados.
+*/
+.header-navigation {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: var(--spacing-md);
+
+    text-align: center;
+}
+
+
+.site-description {
+    max-width: 500px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   NAVEGAÇÃO PRINCIPAL
+   ============================================================ */
+
+.main-navigation {
+    width: 100%;
+}
+
+
+.main-navigation ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 0.35rem;
+}
+
+
+.main-navigation a {
+    display: block;
+
+    padding: 0.5rem 0.65rem;
+
+    border-radius: var(--radius-sm);
+
+    color: var(--color-white);
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    transition:
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+
+.main-navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+    padding: var(--spacing-3xl) 0;
+
+    background-color: var(--color-background-alt);
+}
+
+
+.hero-content {
+    display: grid;
+
+    gap: var(--spacing-2xl);
+}
+
+
+.hero-text {
+    align-self: center;
+}
+
+
+.section-label {
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-primary);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+}
+
+
+h1 {
+    margin-bottom: var(--spacing-lg);
+
+    color: var(--color-primary-dark);
+
+    font-size: clamp(2.3rem, 7vw, 4.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.05em;
+}
+
+
+.hero-description {
+    max-width: 650px;
+
+    margin-bottom: var(--spacing-xl);
+
+    color: var(--color-text-light);
+
+    font-size: 1.08rem;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   BOTÃO
+   ============================================================ */
+
+.button {
+    display: inline-block;
+
+    padding: 0.85rem 1.3rem;
+
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+
+    background-color: var(--color-accent);
+
+    color: #2d241b;
+
+    font-weight: 800;
+
+    transition:
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.button:hover {
+    border-color: var(--color-accent-dark);
+
+    background-color: var(--color-accent-dark);
+
+    color: var(--color-white);
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   IMAGEM DO HERO
+   ============================================================ */
+
+.hero-image {
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    background-color: var(--color-surface);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+.hero-image img {
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+.hero-image figcaption {
+    padding: var(--spacing-md);
+
+    color: var(--color-text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+
+.section {
+    padding: var(--spacing-3xl) 0;
+}
+
+
+.section-alt {
+    background-color: var(--color-background-alt);
+}
+
+
+.section-heading {
+    max-width: 760px;
+
+    margin-bottom: var(--spacing-2xl);
+}
+
+
+.section-heading h2 {
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-primary-dark);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+
+.section-heading > p:last-child {
+    color: var(--color-text-light);
+
+    font-size: 1rem;
+}
+
+
+/* ============================================================
+   CARDS DE CUIDADOS
+   ============================================================ */
+
+.cards-grid {
+    display: grid;
+
+    gap: var(--spacing-lg);
+}
+
+
+.care-card {
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.care-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+.care-card figure {
+    overflow: hidden;
+}
+
+
+.care-card img {
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.care-card:hover img {
+    transform: scale(1.04);
+}
+
+
+.card-content {
+    flex: 1;
+
+    padding: var(--spacing-lg);
+}
+
+
+.card-content h3 {
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-primary-dark);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.card-content p {
+    color: var(--color-text-light);
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   CONTEÚDO EDUCATIVO
+   ============================================================ */
+
+.learning-content {
+    max-width: 820px;
+}
+
+
+.learning-content h3 {
+    margin-top: var(--spacing-2xl);
+
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-primary-dark);
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+.learning-content h3:first-child {
+    margin-top: 0;
+}
+
+
+.learning-content p {
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-text-light);
+
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   LISTA DE BENEFÍCIOS
+   ============================================================ */
+
+.check-list {
+    display: grid;
+
+    gap: var(--spacing-sm);
+
+    margin-top: var(--spacing-md);
+}
+
+
+.check-list li {
+    position: relative;
+
+    padding-left: 1.75rem;
+
+    color: var(--color-text-light);
+}
+
+
+.check-list li::before {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    color: var(--color-primary);
+
+    content: "✓";
+
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   LISTA DE ELEMENTOS SEMÂNTICOS
+   ============================================================ */
+
+.semantic-list {
+    display: grid;
+
+    gap: var(--spacing-md);
+
+    margin-top: var(--spacing-lg);
+}
+
+
+.semantic-list > div {
+    padding: var(--spacing-lg);
+
+    border-left: 4px solid var(--color-primary);
+
+    border-radius: var(--radius-sm);
+
+    background-color: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+.semantic-list dt {
+    margin-bottom: var(--spacing-xs);
+
+    color: var(--color-primary-dark);
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-weight: 700;
+}
+
+
+.semantic-list dd {
+    color: var(--color-text-light);
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   PROPRIEDADES CSS
+   ============================================================ */
+
+.property-list {
+    display: grid;
+
+    gap: var(--spacing-sm);
+
+    margin-top: var(--spacing-md);
+}
+
+
+.property-list li {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.35rem;
+
+    padding: var(--spacing-md);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-sm);
+
+    background-color: var(--color-background-alt);
+}
+
+
+.property-list code {
+    width: fit-content;
+
+    font-weight: 700;
+}
+
+
+.property-list span {
+    color: var(--color-text-light);
+}
+
+
+/* ============================================================
+   GALERIA
+   ============================================================ */
+
+.gallery-grid {
+    display: grid;
+
+    gap: var(--spacing-md);
+}
+
+
+.gallery-item {
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+.gallery-item img {
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+.gallery-item figcaption {
+    padding: var(--spacing-md);
+
+    color: var(--color-text);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   DICAS
+   ============================================================ */
+
+.tips-grid {
+    display: grid;
+
+    gap: var(--spacing-lg);
+}
+
+
+.tip {
+    position: relative;
+
+    padding: var(--spacing-xl);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+.tip-number {
+    display: block;
+
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-accent-dark);
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+.tip h3 {
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-primary-dark);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.tip p {
+    color: var(--color-text-light);
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer {
+    background-color: var(--color-primary-dark);
+
+    color: var(--color-white);
+}
+
+
+.footer-content {
+    display: grid;
+
+    gap: var(--spacing-2xl);
+
+    padding-top: var(--spacing-3xl);
+
+    padding-bottom: var(--spacing-3xl);
+}
+
+
+.footer-logo {
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-white);
+
+    font-size: 1.75rem;
+
+    font-weight: 800;
+}
+
+
+.footer-content p {
+    max-width: 450px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    line-height: 1.6;
+}
+
+
+.footer-content h2 {
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-white);
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+}
+
+
+.footer-links {
+    display: grid;
+
+    gap: var(--spacing-xs);
+}
+
+
+.footer-links a {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 0.2rem 0;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+.footer-links a:hover {
+    color: var(--color-white);
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding-top: var(--spacing-lg);
+
+    padding-bottom: var(--spacing-lg);
+}
+
+
+.footer-bottom p {
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   BREAKPOINT — TABLET
+   A partir de 600px.
+   ============================================================ */
+
+@media (min-width: 600px) {
+
+    .container {
+        width: min(
+            calc(100% - 3rem),
+            var(--container-width)
+        );
+    }
+
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .footer-content {
+        grid-template-columns: 2fr 1fr;
+    }
+
+}
+
+
+/* ============================================================
+   BREAKPOINT — DESKTOP
+   A partir de 900px.
+
+   O brand continua acima do header-navigation.
+
+   brand
+      ↓
+   header-navigation
+
+   Dentro de header-navigation:
+
+   descrição             navegação
+       ← espaço entre os elementos →
+   ============================================================ */
+
+@media (min-width: 900px) {
+
+    /*
+        O container permanece em coluna.
+        O valor do gap foi reduzido para deixar o cabeçalho
+        mais compacto no desktop.
+    */
+    .header-container {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: var(--spacing-lg);
+    }
+
+
+    /*
+        No desktop os conteúdos de header-navigation
+        ficam horizontalmente alinhados.
+    */
+    .header-navigation {
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: var(--spacing-xl);
+
+        text-align: left;
+    }
+
+
+    .site-description {
+        flex: 1;
+    }
+
+
+    .main-navigation {
+        width: auto;
+    }
+
+
+    .main-navigation ul {
+        justify-content: flex-end;
+    }
+
+
+    /* ========================================================
+       HERO
+       ======================================================== */
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+    }
+
+
+    /* ========================================================
+       CARDS
+       ======================================================== */
+
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    /* ========================================================
+       GALERIA
+       ======================================================== */
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* ========================================================
+       DICAS
+       ======================================================== */
+
+    .tips-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+/* ============================================================
+   ACESSIBILIDADE — REDUÇÃO DE MOVIMENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+    }
+
+}
