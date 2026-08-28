@@ -1,985 +1,611 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-    <!-- Define o conjunto de caracteres utilizado pela página -->
-    <meta charset="UTF-8">
-
-    <!-- Permite que o layout seja adaptado a diferentes tamanhos de tela -->
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <!-- Descrição da página para mecanismos de busca -->
-    <meta
-        name="description"
-        content="PetCare: página educativa sobre cuidados com pets, HTML semântico, CSS e design responsivo."
-    >
-
-    <title>PetCare | Cuidados e Desenvolvimento Web</title>
-
-    <!--
-        O CSS fica separado do HTML.
-        Dessa forma, estrutura e apresentação permanecem organizadas.
-    -->
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="PetCare: informações educativas sobre cuidados com pets, HTML semântico, CSS e design responsivo."
+  >
+  <title>PetCare | Cuidados e Tecnologia</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
 </head>
 
-
 <body>
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <a href="#" class="logo">PetCare</a>
+      </div>
 
-    <!-- =========================================================
-         CABEÇALHO PRINCIPAL
-
-         HEADER representa o cabeçalho da página.
-         Normalmente contém identidade, informações introdutórias
-         e elementos de navegação.
-         ========================================================= -->
-    <header class="site-header" id="inicio"> <div class="container header-container"> <!-- BRAND representa a identidade do projeto. Neste caso, contém somente o logotipo. --> <div class="brand"> <a href="#inicio" class="logo" aria-label="PetCare - página inicial" > PetCare </a> </div> <!-- HEADER-NAVIGATION agrupa a navegação principal. A descrição foi removida do HEADER. --> <div class="header-navigation"> <!-- NAV representa o conjunto de links principais utilizados para navegar pelas seções da página. --> <nav class="main-navigation" aria-label="Navegação principal" > <ul> <li> <a href="#apresentacao"> Apresentação </a> </li> <li> <a href="#cuidados"> Cuidados </a> </li> <li> <a href="#html-semantico"> HTML </a> </li> <li> <a href="#css"> CSS </a> </li> <li> <a href="#responsivo"> Responsivo </a> </li> <li> <a href="#galeria"> Galeria </a> </li> <li> <a href="#dicas"> Dicas </a> </li> </ul> </nav> </div> </div> </header>
-
-
-    <!-- =========================================================
-         CONTEÚDO PRINCIPAL
-
-         MAIN representa o conteúdo principal da página.
-         Deve existir apenas um MAIN principal por documento.
-         ========================================================= -->
-    <main>
-
-
-        <!-- =====================================================
-             SEÇÃO DE APRESENTAÇÃO
-
-             SECTION agrupa conteúdos relacionados a um mesmo tema.
-             ===================================================== -->
-        <section
-            class="hero"
-            id="apresentacao"
+      <div class="header-navigation">
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-toggle"
         >
 
-            <div class="container hero-content">
-
-
-                <div class="hero-text">
-
-                    <p class="section-label">
-                        Bem-vindo ao PetCare
-                    </p>
-
-                    <h1>
-                        Cuidar bem também é uma forma de amar.
-                    </h1>
-
-                    <p class="hero-description">
-                        Aprenda sobre cuidados essenciais para animais
-                        de estimação e conheça conceitos fundamentais
-                        de HTML semântico, CSS e design responsivo.
-                    </p>
-
-                    <a
-                        class="button"
-                        href="#cuidados"
-                    >
-                        Conheça os cuidados
-                    </a>
-
-                </div>
-
-
-                <!--
-                    FIGURE é utilizado para representar uma imagem
-                    relacionada ao conteúdo.
-
-                    FIGCAPTION fornece uma legenda para a imagem.
-                -->
-                <figure class="hero-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1000&q=80"
-                        alt="Cachorro deitado olhando para a câmera"
-                    >
-
-                    <figcaption>
-                        Um ambiente saudável começa com bons cuidados.
-                    </figcaption>
-
-                </figure>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             CUIDADOS ESSENCIAIS
-             ===================================================== -->
-        <section
-            class="section"
-            id="cuidados"
+        <label
+          for="menu-toggle"
+          class="menu-button"
+          aria-label="Abrir menu de navegação"
         >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
-            <div class="container">
-
-
-                <header class="section-heading">
-
-                    <p class="section-label">
-                        Bem-estar animal
-                    </p>
-
-                    <h2>
-                        Cuidados essenciais
-                    </h2>
-
-                    <p>
-                        Pequenas atitudes fazem diferença na saúde,
-                        segurança e qualidade de vida dos pets.
-                    </p>
-
-                </header>
-
-
-                <div class="cards-grid">
-
-
-                    <!--
-                        Cada ARTICLE representa um conteúdo independente.
-                        Neste caso, cada card apresenta um cuidado específico.
-                    -->
-                    <article class="care-card">
-
-                        <figure>
-
-                            <img
-                                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80"
-                                alt="Cachorro próximo a uma tigela de alimentação"
-                                loading="lazy"
-                            >
-
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Alimentação
-                            </h3>
-
-                            <p>
-                                Ofereça uma alimentação adequada à espécie,
-                                idade, tamanho e necessidades do animal.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Cada article representa um conteúdo independente -->
-                    <article class="care-card">
-
-                        <figure>
-
-                            <img
-                                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80"
-                                alt="Cachorro recebendo cuidados de higiene"
-                                loading="lazy"
-                            >
-
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Higiene
-                            </h3>
-
-                            <p>
-                                Banhos, escovação, higiene bucal e limpeza
-                                adequada contribuem para o bem-estar do pet.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Cada article representa um conteúdo independente -->
-                    <article class="care-card">
-
-                        <figure>
-
-                            <img
-                                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80"
-                                alt="Cachorro brincando ao ar livre"
-                                loading="lazy"
-                            >
-
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Exercícios
-                            </h3>
-
-                            <p>
-                                Atividades físicas ajudam a manter o animal
-                                ativo, saudável e mentalmente estimulado.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Cada article representa um conteúdo independente -->
-                    <article class="care-card">
-
-                        <figure>
-
-                            <img
-                                src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80"
-                                alt="Cachorro recebendo atendimento veterinário"
-                                loading="lazy"
-                            >
-
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Consultas veterinárias
-                            </h3>
-
-                            <p>
-                                O acompanhamento veterinário auxilia na
-                                prevenção e identificação de problemas de saúde.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             HTML SEMÂNTICO
-             ===================================================== -->
-        <section
-            class="section section-alt"
-            id="html-semantico"
+        <nav
+          class="main-navigation"
+          aria-label="Navegação principal"
         >
-
-            <div class="container">
-
-
-                <header class="section-heading">
-
-                    <p class="section-label">
-                        Desenvolvimento web
-                    </p>
-
-                    <h2>
-                        Aprenda sobre HTML Semântico
-                    </h2>
-
-                    <p>
-                        Entenda como organizar uma página utilizando
-                        elementos que possuem significado.
-                    </p>
-
-                </header>
-
-
-                <!--
-                    ARTICLE representa um conteúdo independente.
-                    Aqui ele contém o conteúdo educativo sobre HTML.
-                -->
-                <article class="learning-content">
-
-
-                    <h3>
-                        O que é HTML semântico?
-                    </h3>
-
-                    <p>
-                        HTML semântico é uma forma de escrever HTML
-                        utilizando elementos que descrevem o significado
-                        do conteúdo.
-                    </p>
-
-                    <p>
-                        Em vez de utilizar somente elementos genéricos como
-                        <code>&lt;div&gt;</code>, utilizamos elementos como
-                        <code>&lt;header&gt;</code>,
-                        <code>&lt;main&gt;</code>,
-                        <code>&lt;section&gt;</code>,
-                        <code>&lt;article&gt;</code> e
-                        <code>&lt;footer&gt;</code>.
-                    </p>
-
-
-                    <h3>
-                        Por que utilizar tags semânticas?
-                    </h3>
-
-                    <ul class="check-list">
-
-                        <li>
-                            Melhoram a organização do código.
-                        </li>
-
-                        <li>
-                            Facilitam a manutenção do projeto.
-                        </li>
-
-                        <li>
-                            Ajudam mecanismos de busca a compreenderem o conteúdo.
-                        </li>
-
-                        <li>
-                            Contribuem para uma melhor acessibilidade.
-                        </li>
-
-                    </ul>
-
-
-                    <h3>
-                        Exemplos de elementos semânticos
-                    </h3>
-
-
-                    <dl class="semantic-list">
-
-
-                        <div>
-
-                            <dt>
-                                &lt;header&gt;
-                            </dt>
-
-                            <dd>
-                                Representa o cabeçalho de uma página ou seção.
-                            </dd>
-
-                        </div>
-
-
-                        <div>
-
-                            <dt>
-                                &lt;main&gt;
-                            </dt>
-
-                            <dd>
-                                Representa o conteúdo principal da página.
-                            </dd>
-
-                        </div>
-
-
-                        <div>
-
-                            <dt>
-                                &lt;section&gt;
-                            </dt>
-
-                            <dd>
-                                Agrupa conteúdos relacionados a um mesmo assunto.
-                            </dd>
-
-                        </div>
-
-
-                        <div>
-
-                            <dt>
-                                &lt;article&gt;
-                            </dt>
-
-                            <dd>
-                                Representa um conteúdo independente e reutilizável.
-                            </dd>
-
-                        </div>
-
-
-                        <div>
-
-                            <dt>
-                                &lt;footer&gt;
-                            </dt>
-
-                            <dd>
-                                Representa informações finais da página ou seção.
-                            </dd>
-
-                        </div>
-
-                    </dl>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             CSS
-             ===================================================== -->
-        <section
-            class="section"
-            id="css"
-        >
-
-            <div class="container">
-
-
-                <header class="section-heading">
-
-                    <p class="section-label">
-                        Estilização
-                    </p>
-
-                    <h2>
-                        Aprenda sobre CSS
-                    </h2>
-
-                    <p>
-                        Entenda como transformar uma estrutura HTML
-                        em uma interface visualmente organizada.
-                    </p>
-
-                </header>
-
-
-                <article class="learning-content">
-
-
-                    <h3>
-                        O que é CSS?
-                    </h3>
-
-                    <p>
-                        CSS significa
-                        <strong>Cascading Style Sheets</strong>,
-                        ou Folhas de Estilo em Cascata.
-                    </p>
-
-                    <p>
-                        Ele controla a apresentação visual dos elementos
-                        HTML, como cores, fontes, espaçamentos, tamanhos
-                        e posicionamento.
-                    </p>
-
-
-                    <h3>
-                        Para que serve?
-                    </h3>
-
-                    <p>
-                        Com CSS podemos criar interfaces organizadas,
-                        agradáveis, acessíveis e adaptáveis a diferentes
-                        tamanhos de tela.
-                    </p>
-
-
-                    <h3>
-                        Exemplos de propriedades CSS
-                    </h3>
-
-
-                    <ul class="property-list">
-
-                        <li>
-                            <code>color</code>
-                            <span>Define a cor do texto.</span>
-                        </li>
-
-                        <li>
-                            <code>background-color</code>
-                            <span>Define a cor de fundo.</span>
-                        </li>
-
-                        <li>
-                            <code>font-size</code>
-                            <span>Define o tamanho da fonte.</span>
-                        </li>
-
-                        <li>
-                            <code>margin</code>
-                            <span>Controla o espaçamento externo.</span>
-                        </li>
-
-                        <li>
-                            <code>padding</code>
-                            <span>Controla o espaçamento interno.</span>
-                        </li>
-
-                        <li>
-                            <code>display</code>
-                            <span>Controla como um elemento é apresentado.</span>
-                        </li>
-
-                    </ul>
-
-
-                    <h3>
-                        Estrutura x apresentação
-                    </h3>
-
-                    <p>
-                        O HTML é responsável principalmente pela
-                        <strong>estrutura e significado</strong> do conteúdo.
-                        O CSS é responsável pela
-                        <strong>apresentação visual</strong>.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             DESIGN RESPONSIVO
-             ===================================================== -->
-        <section
-            class="section section-alt"
-            id="responsivo"
-        >
-
-            <div class="container">
-
-
-                <header class="section-heading">
-
-                    <p class="section-label">
-                        Experiência do usuário
-                    </p>
-
-                    <h2>
-                        Design Responsivo
-                    </h2>
-
-                    <p>
-                        Uma interface deve funcionar bem em diferentes
-                        dispositivos e tamanhos de tela.
-                    </p>
-
-                </header>
-
-
-                <article class="learning-content">
-
-
-                    <h3>
-                        O que é Design Responsivo?
-                    </h3>
-
-                    <p>
-                        Design Responsivo é uma abordagem que permite que
-                        uma página se adapte a diferentes tamanhos de tela.
-                    </p>
-
-                    <p>
-                        A mesma interface pode ser utilizada em smartphones,
-                        tablets, notebooks e monitores maiores.
-                    </p>
-
-
-                    <h3>
-                        Por que é importante?
-                    </h3>
-
-                    <p>
-                        As pessoas acessam a internet utilizando diferentes
-                        dispositivos. Uma interface responsiva proporciona
-                        uma experiência mais consistente.
-                    </p>
-
-
-                    <h3>
-                        O que são componentes responsivos?
-                    </h3>
-
-                    <p>
-                        São elementos capazes de modificar seu tamanho,
-                        posicionamento ou organização de acordo com o espaço
-                        disponível.
-                    </p>
-
-
-                    <h3>
-                        O que são breakpoints?
-                    </h3>
-
-                    <p>
-                        Breakpoints são pontos definidos no CSS em que o
-                        layout pode mudar para se adaptar a diferentes
-                        larguras de tela.
-                    </p>
-
-                    <p>
-                        Eles são normalmente implementados utilizando
-                        <code>@media</code> queries.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             GALERIA DE PETS
-
-             FIGURE representa uma unidade de conteúdo visual.
-             FIGCAPTION representa a legenda da imagem.
-             ===================================================== -->
-        <section
-            class="section"
-            id="galeria"
-        >
-
-            <div class="container">
-
-
-                <header class="section-heading">
-
-                    <p class="section-label">
-                        Galeria
-                    </p>
-
-                    <h2>
-                        Galeria de pets
-                    </h2>
-
-                    <p>
-                        Diferentes animais, diferentes personalidades.
-                    </p>
-
-                </header>
-
-
-                <div class="gallery-grid">
-
-
-                    <!-- Galeria de imagens -->
-
-                    <figure class="gallery-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
-                            alt="Cachorro de pequeno porte"
-                            loading="lazy"
-                        >
-
-                        <figcaption>
-                            Companheiro de quatro patas
-                        </figcaption>
-
-                    </figure>
-
-
-                    <figure class="gallery-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80"
-                            alt="Gato olhando para a câmera"
-                            loading="lazy"
-                        >
-
-                        <figcaption>
-                            Um olhar curioso
-                        </figcaption>
-
-                    </figure>
-
-
-                    <figure class="gallery-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80"
-                            alt="Gato descansando"
-                            loading="lazy"
-                        >
-
-                        <figcaption>
-                            Hora de descansar
-                        </figcaption>
-
-                    </figure>
-
-
-                    <figure class="gallery-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80"
-                            alt="Cachorro sentado"
-                            loading="lazy"
-                        >
-
-                        <figcaption>
-                            Amigo fiel
-                        </figcaption>
-
-                    </figure>
-
-
-                    <figure class="gallery-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=800&q=80"
-                            alt="Cachorro correndo ao ar livre"
-                            loading="lazy"
-                        >
-
-                        <figcaption>
-                            Diversão ao ar livre
-                        </figcaption>
-
-                    </figure>
-
-
-                    <figure class="gallery-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=800&q=80"
-                            alt="Gato sentado"
-                            loading="lazy"
-                        >
-
-                        <figcaption>
-                            Personalidade felina
-                        </figcaption>
-
-                    </figure>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             DICAS RÁPIDAS
-
-             Cada ARTICLE representa uma dica independente.
-             ===================================================== -->
-        <section
-            class="section section-alt"
-            id="dicas"
-        >
-
-            <div class="container">
-
-
-                <header class="section-heading">
-
-                    <p class="section-label">
-                        Informação
-                    </p>
-
-                    <h2>
-                        Dicas rápidas
-                    </h2>
-
-                    <p>
-                        Algumas atitudes simples podem contribuir
-                        para uma rotina mais saudável.
-                    </p>
-
-                </header>
-
-
-                <div class="tips-grid">
-
-
-                    <!-- Cada article representa uma dica independente -->
-                    <article class="tip">
-
-                        <span class="tip-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Mantenha água disponível
-                        </h3>
-
-                        <p>
-                            Garanta que seu pet tenha acesso a água limpa
-                            e fresca durante o dia.
-                        </p>
-
-                    </article>
-
-
-                    <!-- Cada article representa uma dica independente -->
-                    <article class="tip">
-
-                        <span class="tip-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Observe mudanças
-                        </h3>
-
-                        <p>
-                            Mudanças de comportamento ou rotina podem indicar
-                            que algo precisa de atenção.
-                        </p>
-
-                    </article>
-
-
-                    <!-- Cada article representa uma dica independente -->
-                    <article class="tip">
-
-                        <span class="tip-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Mantenha a vacinação em dia
-                        </h3>
-
-                        <p>
-                            Siga as orientações do médico-veterinário
-                            sobre vacinação e prevenção.
-                        </p>
-
-                    </article>
-
-
-                    <!-- Cada article representa uma dica independente -->
-                    <article class="tip">
-
-                        <span class="tip-number">
-                            04
-                        </span>
-
-                        <h3>
-                            Ofereça enriquecimento
-                        </h3>
-
-                        <p>
-                            Brinquedos e atividades adequadas ajudam
-                            a estimular física e mentalmente o animal.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================================================
-         RODAPÉ
-
-         FOOTER representa as informações finais da página.
-         Pode conter copyright, contatos, links e informações
-         complementares.
-         ========================================================= -->
-    <footer class="site-footer">
-
-        <div class="container footer-content">
-
-
-            <div class="footer-about">
-
-                <p class="footer-logo">
-                    PetCare
-                </p>
-
-                <p>
-                    Projeto educacional sobre cuidados com pets
-                    e desenvolvimento web.
-                </p>
-
-            </div>
-
-
-            <div class="footer-navigation">
-
-                <h2>
-                    Links
-                </h2>
-
-
-                <!--
-                    NAV também pode ser utilizado no rodapé quando
-                    existe um conjunto de links de navegação.
-                -->
-                <nav aria-label="Links do rodapé">
-
-                    <ul class="footer-links">
-
-                        <li>
-                            <a href="#inicio">
-                                Início
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="mailto:contato@petcare.exemplo">
-                                Contato
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Instagram
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Facebook
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-            </div>
-
+          <ul>
+            <li>
+              <a href="#apresentacao">Apresentação</a>
+            </li>
+
+            <li>
+              <a href="#cuidados">Cuidados essenciais</a>
+            </li>
+
+            <li>
+              <a href="#html-semantico">HTML Semântico</a>
+            </li>
+
+            <li>
+              <a href="#css">CSS</a>
+            </li>
+
+            <li>
+              <a href="#responsivo">Design Responsivo</a>
+            </li>
+
+            <li>
+              <a href="#galeria">Galeria</a>
+            </li>
+
+            <li>
+              <a href="#dicas">Dicas rápidas</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="apresentacao" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="section-label">Bem-vindo ao PetCare</p>
+
+          <h1>
+            Cuidar bem também é uma forma de amar.
+          </h1>
+
+          <p class="hero-description">
+            O PetCare é um projeto educativo criado para apresentar
+            informações simples sobre cuidados essenciais com pets
+            e, ao mesmo tempo, ensinar conceitos fundamentais de
+            desenvolvimento web, como HTML semântico, CSS e design
+            responsivo.
+          </p>
+
+          <a href="#cuidados" class="button">
+            Conheça os cuidados
+          </a>
         </div>
 
+        <figure class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1000&q=80"
+            alt="Cachorro deitado em um ambiente externo"
+          >
 
-        <div class="footer-bottom">
+          <figcaption>
+            O cuidado diário contribui para o bem-estar dos animais.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-            <div class="container">
+    <section id="cuidados" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Bem-estar animal</p>
 
-                <p>
-                    © 2026 PetCare. Projeto exclusivamente educacional.
-                </p>
+          <h2>Cuidados essenciais</h2>
 
-            </div>
-
+          <p>
+            Alguns cuidados básicos fazem parte da rotina de qualquer
+            animal de estimação. Alimentação adequada, higiene,
+            exercícios e acompanhamento veterinário ajudam a manter
+            uma vida mais saudável.
+          </p>
         </div>
 
-    </footer>
+        <div class="cards-grid">
+          <article class="care-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=800&q=80"
+                alt="Cachorro próximo a uma tigela de alimentação"
+                loading="lazy"
+              >
+            </figure>
 
+            <div class="card-content">
+              <h3>Alimentação</h3>
+
+              <p>
+                Ofereça uma alimentação equilibrada e adequada
+                à espécie, idade, porte e necessidades do animal.
+              </p>
+            </div>
+          </article>
+
+          <article class="care-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80"
+                alt="Cachorro recebendo cuidados de higiene"
+                loading="lazy"
+              >
+            </figure>
+
+            <div class="card-content">
+              <h3>Higiene</h3>
+
+              <p>
+                Banhos, escovação, limpeza dos espaços e cuidados
+                com dentes e unhas ajudam a preservar a saúde do pet.
+              </p>
+            </div>
+          </article>
+
+          <article class="care-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=800&q=80"
+                alt="Cachorro praticando atividade física ao ar livre"
+                loading="lazy"
+              >
+            </figure>
+
+            <div class="card-content">
+              <h3>Exercícios</h3>
+
+              <p>
+                Atividades físicas adequadas ajudam a controlar
+                o peso, reduzir o estresse e estimular o animal.
+              </p>
+            </div>
+          </article>
+
+          <article class="care-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80"
+                alt="Veterinário examinando um cachorro"
+                loading="lazy"
+              >
+            </figure>
+
+            <div class="card-content">
+              <h3>Consultas veterinárias</h3>
+
+              <p>
+                O acompanhamento profissional permite prevenir
+                problemas e acompanhar a saúde do animal.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="html-semantico" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Desenvolvimento web</p>
+
+          <h2>Aprenda sobre HTML Semântico</h2>
+
+          <p>
+            HTML semântico utiliza elementos que descrevem
+            claramente o significado e a função de cada parte
+            do conteúdo de uma página.
+          </p>
+        </div>
+
+        <div class="learning-content">
+          <h3>O que é HTML semântico?</h3>
+
+          <p>
+            É uma forma de construir páginas utilizando tags que
+            representam o propósito do conteúdo. Em vez de utilizar
+            elementos genéricos para tudo, escolhemos elementos que
+            possuem significado.
+          </p>
+
+          <h3>Por que utilizar tags semânticas?</h3>
+
+          <p>
+            Elas melhoram a organização do código, facilitam a
+            manutenção, ajudam mecanismos de busca a compreender
+            o conteúdo e contribuem para a acessibilidade.
+          </p>
+
+          <ul class="check-list">
+            <li>Melhor organização estrutural.</li>
+            <li>Maior facilidade de manutenção.</li>
+            <li>Melhor interpretação por tecnologias assistivas.</li>
+            <li>Estrutura mais clara para mecanismos de busca.</li>
+          </ul>
+
+          <h3>Principais elementos semânticos</h3>
+
+          <dl class="semantic-list">
+            <div>
+              <dt>&lt;header&gt;</dt>
+              <dd>
+                Representa o cabeçalho de uma página ou de uma seção.
+              </dd>
+            </div>
+
+            <div>
+              <dt>&lt;main&gt;</dt>
+              <dd>
+                Representa o conteúdo principal da página.
+              </dd>
+            </div>
+
+            <div>
+              <dt>&lt;section&gt;</dt>
+              <dd>
+                Organiza um conteúdo relacionado dentro de uma área.
+              </dd>
+            </div>
+
+            <div>
+              <dt>&lt;article&gt;</dt>
+              <dd>
+                Representa um conteúdo independente que pode fazer
+                sentido por si só.
+              </dd>
+            </div>
+
+            <div>
+              <dt>&lt;footer&gt;</dt>
+              <dd>
+                Representa o rodapé de uma página ou seção.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="css" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Estilização</p>
+
+          <h2>Aprenda sobre CSS</h2>
+
+          <p>
+            CSS é a linguagem utilizada para controlar a apresentação
+            visual dos elementos HTML.
+          </p>
+        </div>
+
+        <div class="learning-content">
+          <h3>O que é CSS?</h3>
+
+          <p>
+            CSS significa Cascading Style Sheets, ou Folhas de
+            Estilo em Cascata. Ele permite definir cores, tamanhos,
+            espaçamentos, posicionamento, fontes e diversos outros
+            aspectos visuais.
+          </p>
+
+          <h3>Para que serve?</h3>
+
+          <p>
+            CSS separa a apresentação visual da estrutura HTML,
+            permitindo que o mesmo documento HTML receba diferentes
+            estilos sem alterar seu conteúdo.
+          </p>
+
+          <h3>Exemplos de propriedades CSS</h3>
+
+          <ul class="property-list">
+            <li>
+              <code>color</code>
+              <span>Define a cor do texto.</span>
+            </li>
+
+            <li>
+              <code>background-color</code>
+              <span>Define a cor de fundo de um elemento.</span>
+            </li>
+
+            <li>
+              <code>font-size</code>
+              <span>Define o tamanho da fonte.</span>
+            </li>
+
+            <li>
+              <code>margin</code>
+              <span>Controla o espaçamento externo.</span>
+            </li>
+
+            <li>
+              <code>padding</code>
+              <span>Controla o espaçamento interno.</span>
+            </li>
+
+            <li>
+              <code>display</code>
+              <span>Define como um elemento participa do layout.</span>
+            </li>
+          </ul>
+
+          <h3>Estrutura x apresentação</h3>
+
+          <p>
+            O HTML define o significado e a estrutura do conteúdo.
+            O CSS define como esse conteúdo será apresentado
+            visualmente. Essa separação torna o projeto mais
+            organizado e fácil de manter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="responsivo" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Experiência multiplataforma</p>
+
+          <h2>Design Responsivo</h2>
+
+          <p>
+            Uma página responsiva adapta seu layout para diferentes
+            tamanhos de tela, proporcionando uma experiência adequada
+            em computadores, tablets e smartphones.
+          </p>
+        </div>
+
+        <div class="learning-content">
+          <h3>O que é Design Responsivo?</h3>
+
+          <p>
+            É uma abordagem de desenvolvimento que permite que
+            uma interface se adapte automaticamente ao espaço
+            disponível na tela.
+          </p>
+
+          <h3>Por que é importante?</h3>
+
+          <p>
+            Pessoas acessam sites utilizando dispositivos com
+            diferentes resoluções. Uma interface responsiva evita
+            conteúdos cortados, textos difíceis de ler e rolagem
+            horizontal desnecessária.
+          </p>
+
+          <h3>O que são componentes responsivos?</h3>
+
+          <p>
+            São elementos da interface capazes de modificar seu
+            tamanho, posição ou organização conforme o espaço
+            disponível. Cards, menus, imagens e grids podem ser
+            responsivos.
+          </p>
+
+          <h3>O que são breakpoints?</h3>
+
+          <p>
+            Breakpoints são pontos definidos no CSS onde determinadas
+            regras de estilo são alteradas para adaptar o layout
+            a diferentes larguras de tela.
+          </p>
+
+          <ul class="check-list">
+            <li>Mobile-first.</li>
+            <li>Grid e Flexbox para layouts flexíveis.</li>
+            <li>Imagens adaptáveis.</li>
+            <li>Media queries para diferentes tamanhos de tela.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Amigos de quatro patas</p>
+
+          <h2>Galeria de pets</h2>
+
+          <p>
+            Uma seleção de imagens para representar diferentes
+            animais e momentos de cuidado.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80"
+              alt="Cachorro sentado olhando para a câmera"
+              loading="lazy"
+            >
+            <figcaption>Companheiro atento</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80"
+              alt="Gato olhando para a câmera"
+              loading="lazy"
+            >
+            <figcaption>Gato curioso</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=80"
+              alt="Dois cachorros brincando ao ar livre"
+              loading="lazy"
+            >
+            <figcaption>Momento de diversão</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=700&q=80"
+              alt="Cachorro brincando em um parque"
+              loading="lazy"
+            >
+            <figcaption>Passeio ao ar livre</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80"
+              alt="Gato sentado em ambiente interno"
+              loading="lazy"
+            >
+            <figcaption>Companheiro tranquilo</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=700&q=80"
+              alt="Cachorro descansando"
+              loading="lazy"
+            >
+            <figcaption>Hora do descanso</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="dicas" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Informação rápida</p>
+
+          <h2>Dicas rápidas</h2>
+
+          <p>
+            Pequenas atitudes podem contribuir para uma rotina
+            mais segura e saudável.
+          </p>
+        </div>
+
+        <div class="tips-grid">
+          <article class="tip">
+            <span class="tip-number">01</span>
+
+            <h3>Mantenha água disponível</h3>
+
+            <p>
+              Garanta que o animal tenha acesso a água limpa
+              e fresca durante o dia.
+            </p>
+          </article>
+
+          <article class="tip">
+            <span class="tip-number">02</span>
+
+            <h3>Crie uma rotina</h3>
+
+            <p>
+              Horários consistentes para alimentação, descanso
+              e atividades ajudam na organização do dia.
+            </p>
+          </article>
+
+          <article class="tip">
+            <span class="tip-number">03</span>
+
+            <h3>Observe mudanças</h3>
+
+            <p>
+              Alterações de comportamento ou rotina podem indicar
+              que algo merece atenção.
+            </p>
+          </article>
+
+          <article class="tip">
+            <span class="tip-number">04</span>
+
+            <h3>Procure orientação profissional</h3>
+
+            <p>
+              Em caso de dúvidas sobre a saúde do animal,
+              procure um médico-veterinário.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <p class="footer-logo">PetCare</p>
+
+        <p>
+          Projeto educativo sobre cuidados com pets e fundamentos
+          de desenvolvimento web.
+        </p>
+      </div>
+
+      <div>
+        <h2>Links</h2>
+
+        <nav aria-label="Links do rodapé">
+          <ul class="footer-links">
+            <li>
+              <a href="#contato">Contato</a>
+            </li>
+
+            <li>
+              <a href="#instagram">Instagram</a>
+            </li>
+
+            <li>
+              <a href="#facebook">Facebook</a>
+            </li>
+
+            <li>
+              <a href="#sobre">Sobre o projeto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          Este site possui finalidade exclusivamente educacional.
+          As informações apresentadas não substituem orientação
+          profissional veterinária.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>
