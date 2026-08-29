@@ -661,6 +661,7 @@ h1 {
 .gallery-grid {
   display: grid;
   gap: var(--spacing-md);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .gallery-item {
@@ -731,7 +732,8 @@ h1 {
 
 .footer-content {
   display: grid;
-  gap: var(--spacing-2xl);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-lg);
   padding-top: var(--spacing-3xl);
   padding-bottom: var(--spacing-3xl);
 }
@@ -784,6 +786,7 @@ h1 {
 }
 
 @media (max-width: 599px) {
+
   .cards-grid {
     display: grid;
     grid-auto-columns: 100%;
@@ -806,11 +809,21 @@ h1 {
 }
 
 @media (max-width: 899px) {
-  .hero {
+  .hero,
+  .section {
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .logo{
     font-size: 1.6rem;
+  }
+  .tip{
+    padding: var(--spacing-md)
+  }
+
+  .footer-content{
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-xl);
   }
 }
 
