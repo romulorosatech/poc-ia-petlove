@@ -783,6 +783,28 @@ h1 {
   font-size: 0.85rem;
 }
 
+@media (max-width: 599px) {
+  .cards-grid {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1rem;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+
+  .care-card {
+    min-width: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
 @media (max-width: 899px) {
   .hero {
     padding-top: 2rem;
